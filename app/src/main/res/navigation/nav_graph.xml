@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inboxFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.smsbridge.ui.inbox.InboxFragment"
+        android:label="Inbox">
+        <action
+            android:id="@+id/action_inbox_to_conversation"
+            app:destination="@id/conversationFragment" />
+        <action
+            android:id="@+id/action_inbox_to_compose"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.smsbridge.ui.conversation.ConversationFragment"
+        android:label="Conversation">
+        <argument
+            android:name="address"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webhookListFragment"
+        android:name="com.smsbridge.ui.webhook.WebhookListFragment"
+        android:label="Webhooks">
+        <action
+            android:id="@+id/action_webhookList_to_webhookEdit"
+            app:destination="@id/webhookEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webhookEditFragment"
+        android:name="com.smsbridge.ui.webhook.WebhookEditFragment"
+        android:label="Edit Webhook">
+        <argument
+            android:name="webhookId"
+            app:argType="long"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/logFragment"
+        android:name="com.smsbridge.ui.webhook.LogFragment"
+        android:label="Delivery Log" />
+
+</navigation>

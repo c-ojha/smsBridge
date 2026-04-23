@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SMSBridge</string>
+
+    <!-- Tabs -->
+    <string name="inbox">Inbox</string>
+    <string name="webhooks">Webhooks</string>
+    <string name="delivery_log">Delivery Log</string>
+
+    <!-- Inbox -->
+    <string name="no_messages">No messages yet</string>
+    <string name="compose">Compose</string>
+    <string name="type_message">Type a message…</string>
+
+    <!-- Webhooks -->
+    <string name="no_webhooks">No webhooks configured.\nTap + to add one.</string>
+    <string name="add_webhook">Add Webhook</string>
+    <string name="webhook_name">Webhook Name</string>
+    <string name="webhook_url">Endpoint URL (https://…)</string>
+    <string name="filter_operator">Filter Logic</string>
+    <string name="retry_count">Max Retries</string>
+    <string name="retry_delay_sec">Retry Delay (sec)</string>
+    <string name="filter_rules">Filter Rules</string>
+    <string name="add_filter">+ Add Filter</string>
+    <string name="filter_hint">No filters = forward all SMS. With filters: only matching SMS are forwarded.</string>
+    <string name="headers">HTTP Headers</string>
+    <string name="add_header">+ Add Header</string>
+    <string name="headers_hint">Add Authorization, X-Api-Key, or any custom headers. Values are encrypted at rest.</string>
+    <string name="save_webhook">Save Webhook</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <!-- Log -->
+    <string name="no_logs">No delivery logs yet</string>
+</resources>

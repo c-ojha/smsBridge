@@ -1,0 +1,5 @@
+-keep class com.smsbridge.data.db.entity.** { *; }
+-keep class com.smsbridge.data.db.dao.** { *; }
+-keepattributes *Annotation*
+-dontwarn okhttp3.**
+-dontwarn okio.**
