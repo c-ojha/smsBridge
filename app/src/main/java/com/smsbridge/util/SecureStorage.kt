@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import javax.crypto.Cipher
+import javax.crypto.SecretKey
 import javax.crypto.spec.GCMParameterSpec
 
 /**
@@ -48,7 +49,7 @@ class SecureStorage(context: Context) {
         }
 
         val cipher = Cipher.getInstance("AES/GCM/NoPadding")
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey)
+        cipher.init(Cipher.ENCRYPT_MODE, secretKey as javax.crypto.SecretKey)
         val iv = cipher.iv
         val cipherText = cipher.doFinal(plainText.toByteArray(Charsets.UTF_8))
         val combined = iv + cipherText
